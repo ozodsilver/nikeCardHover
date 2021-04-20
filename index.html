@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(25,69,189,1) 25%, rgba(0,212,255,1) 100%);
+		}
+
+		.container{
+			width: 400px;
+			height: 500px;
+			border-radius: 10px;
+
+			 backdrop-filter: blur(2px);
+  background-color: rgba(0, 145, 255, 0.35);
+border-radius: 10px;
+			position: relative;
+		box-shadow: inset -20px 20px 60px #00b8d9,
+            inset 20px -20px 60px #00faff;
+
+		}
+
+		.container::before{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 80%;
+			height: 400px;
+			background: rgba( 255, 255, 255, 0.00 );
+
+  backdrop-filter: blur(2px);
+ background: #00ffcc;
+border-radius: 10px;
+			clip-path: circle(38.1% at 75% 15%);
+			transition: 0.5s;
+			border-top-right-radius: 10px;
+
+		}
+
+		.container:hover::before{
+			width: 100%;
+			clip-path: circle(50% at 75% 27%);
+		}
+
+		.container img{
+			width: 300px;
+			z-index: 1000;
+			position: absolute;
+			left: 60px;
+			top: 100px;
+			transition: 1s;
+		}
+
+		.container:hover img{
+			transform: translate(50px,-110px) rotate(-50deg);
+			
+
+
+		}
+
+		.container h2{
+			
+			position: relative;
+			top: 15px;
+			left: 110px;
+			letter-spacing: 4px;
+			text-align: center;
+			transition: 1s;
+			color: black;
+			font-weight: 900 !important;
+			font-size: 40px;
+			transition-delay: 0.2s;
+			font-family: sans-serif;
+
+		}
+
+		.container:hover h2{
+			
+			
+			font-weight: 900 !important;
+			visibility: visible;
+			transform: translate(-100px,250px);
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			z-index: 11111;
+			color: white;
+		}
+
+		.container::after{
+
+			content: '';
+			width: 90%;
+visibility: hidden;
+			height: 0px;
+			transition: 1s;
+			position: absolute;
+			left: 20px;
+			bottom: 0;
+			transition-delay: 0.5s;
+			display: block;
+border-radius: 10px;
+
+
+
+		}
+
+		.container:hover::after{
+			height: 120px;
+			visibility: visible;
+			
+			border-top: 4px dashed #00ffcc;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<img src="dsdsds.png" alt="">
+		<h2>NIKE✓</h2>
+	</div>
+
+
+
+	<script>
+		
+	</script>
+</body>
+</html>
